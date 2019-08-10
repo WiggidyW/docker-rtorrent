@@ -8,7 +8,11 @@ ARG USER
 ARG PASS
 
 RUN apk add --no-cache rtorrent nginx apache2-utils \
- && echo "daemon off;" >> /etc/nginx/nginx.conf
+ && echo "daemon off;" >> /etc/nginx/nginx.conf \
+ && mkdir -p /run/rtorrent \
+ && mkdir /run/nginx \
+ && mkdir /download \
+ && mkdir /torrent
 
 COPY ./root /
 
