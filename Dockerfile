@@ -16,6 +16,8 @@ RUN apk add --no-cache rtorrent nginx apache2-utils \
 
 COPY ./root /
 
+RUN chmod +x /init.sh
+
 VOLUME /download /torrent
 
 EXPOSE 50000 8080 6881 6881/udp
