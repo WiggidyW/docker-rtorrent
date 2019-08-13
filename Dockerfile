@@ -20,6 +20,6 @@ RUN chmod +x /init.sh
 
 VOLUME /download /torrent
 
-EXPOSE 50000 8080 6881 6881/udp
+EXPOSE 50000 6881 6881/udp 80
 
 CMD ["/init.sh"]
