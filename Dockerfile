@@ -12,13 +12,14 @@ RUN apk add --no-cache rtorrent nginx apache2-utils \
  && mkdir -p /run/rtorrent \
  && mkdir /run/nginx \
  && mkdir /download \
- && mkdir /torrent
+ && mkdir /torrent \
+ && mkdir /config
 
 COPY ./root /
 
 RUN chmod +x /init.sh
 
-VOLUME /download /torrent
+VOLUME /download /torrent /config
 
 EXPOSE 50000 8080 6881 6881/udp
 
