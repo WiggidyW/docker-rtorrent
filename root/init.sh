@@ -1,4 +1,5 @@
 #!/bin/ash
+cp /config/.rtorrent.rc /root/.rtorrent.rc
 htpasswd -b -c /etc/nginx/rtorrent.auth ${USER} ${PASS}
 nginx &
 P1=$!
