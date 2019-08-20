@@ -19,7 +19,7 @@ COPY ./root /
 
 RUN chmod +x /init.sh
 
-VOLUME /download /torrent /config
+VOLUME /download /torrent /config /run/rtorrent
 
 EXPOSE 50000 8080 6881 6881/udp
 
