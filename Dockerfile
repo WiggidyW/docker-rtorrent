@@ -2,7 +2,6 @@ FROM alpine
 
 LABEL maintainer="wiggidy" mail="wiggidy@riseup.net"
 LABEL description="minimal rTorrent in Docker, intended for use with remote (local or internet) XMLRPC controller such as ruTorrent or Flood."
-LABEL version="1.0"
 
 ARG USER
 ARG PASS
